@@ -1,7 +1,7 @@
 from random import randrange
 
 from brain_games.game import conduct_rounds
-from brain_games.helpers.is_even import is_even
+from brain_games.helpers.maths import is_even
 
 count_rounds = 3
 max_range = 500

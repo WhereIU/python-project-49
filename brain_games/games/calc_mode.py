@@ -1,7 +1,7 @@
 from random import randrange
 
 from brain_games.game import conduct_rounds
-from brain_games.helpers.calculate_expression import calculate_expression
+from brain_games.helpers.maths import calculate_expression
 
 count_rounds = 3
 max_range = 500
@@ -15,7 +15,7 @@ def get_round_values():
     sign = signs[randrange(signs_len)]
     second_num = randrange(max_range)
     question = f"{first_num} {sign} {second_num}"
-    correct_answer = calculate_expression(first_num, sign, second_num)
+    correct_answer = str(calculate_expression(first_num, sign, second_num))
     return question, correct_answer
 
 
