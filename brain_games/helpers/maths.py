@@ -2,6 +2,17 @@ def is_even(number):
     return number % 2 == 0
 
 
+def is_prime(num):
+    if num < 1:
+        return
+    if num <= 3:
+        return True
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+
 def calculate_expression(first_num, sign, second_num):
     match sign:
         case "+":
