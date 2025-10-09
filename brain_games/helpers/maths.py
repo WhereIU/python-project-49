@@ -36,7 +36,7 @@ def get_gcd(first_num, second_num):
         return sorted_nums[0]
 
     for possible_divisor in range(
-        int((sorted_nums[1]) ** 0.5 + 1),
+        int(sorted_nums[1] / 2) + 1,
         1, -1):
         if (sorted_nums[0] % possible_divisor == 0) and (
             sorted_nums[1] % possible_divisor == 0):
