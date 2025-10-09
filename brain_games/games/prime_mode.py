@@ -5,7 +5,7 @@ from brain_games.helpers.maths import is_prime
 
 COUNT_ROUNDS = 3
 MAX_NUM = 500
-RULE = 'nswer "yes" if given number is prime. Otherwise answer "no".'
+RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def get_round_values():
