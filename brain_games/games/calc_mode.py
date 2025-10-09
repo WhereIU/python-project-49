@@ -4,16 +4,16 @@ from brain_games.game import conduct_rounds
 from brain_games.helpers.maths import calculate_expression
 
 COUNT_ROUNDS = 3
-MAX_RANGE = 500
+MAX_NUM = 500
 SIGNS = ["+", "-", "*"]
 SIGNS_LEN = len(SIGNS)
 RULE = "What is the result of the expression?"
 
 
 def get_round_values():
-    first_num = randrange(MAX_RANGE)
+    first_num = randrange(MAX_NUM + 1)
     sign = SIGNS[randrange(SIGNS_LEN)]
-    second_num = randrange(MAX_RANGE)
+    second_num = randrange(MAX_NUM + 1)
     question = f"{first_num} {sign} {second_num}"
     correct_answer = str(calculate_expression(first_num, sign, second_num))
     return question, correct_answer
