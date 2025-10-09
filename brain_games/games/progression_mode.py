@@ -3,18 +3,18 @@ from random import randrange
 from brain_games.game import conduct_rounds
 from brain_games.helpers.collections import get_hiden_coll, get_progression
 
-count_rounds = 3
-min_progression_len = 5
-max_progression_len = 10
-max_range = 200
-rule = "What number is missing in the progression?"
+COUNT_ROUNDS = 3
+MIN_PROGRESSION_LEN = 5
+MAX_PROGRESSION_LEN = 10
+MAX_RANGE = 200
+RULE = "What number is missing in the progression?"
 
 
 # -
 def get_round_values():
-    start_num = randrange(-max_range, max_range)
-    range_num = randrange(-max_range, max_range)
-    progression_len = randrange(min_progression_len, max_progression_len + 1)
+    start_num = randrange(-MAX_RANGE, MAX_RANGE)
+    range_num = randrange(-MAX_RANGE, MAX_RANGE)
+    progression_len = randrange(MIN_PROGRESSION_LEN, MAX_PROGRESSION_LEN + 1)
     progression = get_progression(start_num, range_num, progression_len)
     missing_num_index = randrange(progression_len + 1)
     hiden_progression = get_hiden_coll(progression, missing_num_index)
@@ -24,4 +24,4 @@ def get_round_values():
 
 
 def start_game():
-    conduct_rounds(rule, count_rounds, get_round_values)
+    conduct_rounds(RULE, COUNT_ROUNDS, get_round_values)
