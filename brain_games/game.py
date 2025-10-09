@@ -8,7 +8,7 @@ def conduct_rounds(rule, count_rounds, get_round_values):
     i = 0
 
     print(rule)
-    while i < 3:
+    while i < count_rounds:
         question, correct_answer = get_round_values()
         print(f"Question: {question}")
         user_answer = (prompt.string("Your answer: ")).strip()
